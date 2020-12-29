@@ -2,16 +2,16 @@
 class Digaz < Formula
   desc "Look up region and other information for any Azure IP address"
   homepage "https://github.com/sampointer/digaz"
-  version "0.1.0"
+  version "0.1.1"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/sampointer/digaz/releases/download/v0.1.0/digaz_0.1.0_Darwin_x86_64.tar.gz"
-    sha256 "8a598a41b7c9f36d30bcad64f2016cdeb58530ad8ca3c25a02e6024942e956f9"
+    url "https://github.com/sampointer/digaz/releases/download/v0.1.1/digaz_0.1.1_Darwin_x86_64.tar.gz"
+    sha256 "cc0c1e51fd15406aa1e07da050cb857c21a7f7a221c154d20fc3d2a89ea6c8b5"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/sampointer/digaz/releases/download/v0.1.0/digaz_0.1.0_Linux_x86_64.tar.gz"
-    sha256 "6fa60e64054cc83c5f2dbdbad38808852db34c58c610293be40788520b574801"
+    url "https://github.com/sampointer/digaz/releases/download/v0.1.1/digaz_0.1.1_Linux_x86_64.tar.gz"
+    sha256 "26c71f6dd0048382f45d689115e3d7aadb68cb3fd09d4118876b408fe24339eb"
   end
 
   def install
