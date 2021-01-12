@@ -5,20 +5,20 @@
 class Digaz < Formula
   desc "Look up region and other information for any Azure IP address"
   homepage "https://github.com/sampointer/digaz"
-  version "0.2.0"
+  version "0.3.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/sampointer/digaz/releases/download/v0.2.0/digaz_0.2.0_Darwin_x86_64.tar.gz"
-    sha256 "7e9551a6b730d80f8d70d8139bb0c64c3c441cbfba6e91d03695bb5323aa9a08"
+    url "https://github.com/sampointer/digaz/releases/download/v0.3.0/digaz_0.3.0_Darwin_x86_64.tar.gz"
+    sha256 "ac5a54898df064f5b0d7e07f6b1e6ea1b06cfc46b6699409a3c39685f5791c4d"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/sampointer/digaz/releases/download/v0.2.0/digaz_0.2.0_Linux_x86_64.tar.gz"
-    sha256 "9fee686500920ec2bc21189c29af08710a652bde9e3c73e3587adaa7a162c309"
+    url "https://github.com/sampointer/digaz/releases/download/v0.3.0/digaz_0.3.0_Linux_x86_64.tar.gz"
+    sha256 "7961ea493ddba091222882f4180072009d1597921e3617067a4c97339b5d448a"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/sampointer/digaz/releases/download/v0.2.0/digaz_0.2.0_Linux_arm64.tar.gz"
-    sha256 "73ef6f9a07124d959f96e9222b99efa6a05736625b0af0819e2587d4b7d5c8bc"
+    url "https://github.com/sampointer/digaz/releases/download/v0.3.0/digaz_0.3.0_Linux_arm64.tar.gz"
+    sha256 "f14d7de58795aa588100c8c5d01595f58cbeb72bd1e3924ddec9bc5fd3ea0d55"
   end
 
   def install
