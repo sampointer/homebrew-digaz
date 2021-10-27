@@ -5,32 +5,43 @@
 class Digaz < Formula
   desc "Look up region and other information for any Azure IP address"
   homepage "https://github.com/sampointer/digaz"
-  version "0.3.5"
-  bottle :unneeded
+  version "0.3.6"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/sampointer/digaz/releases/download/v0.3.5/digaz_0.3.5_Darwin_arm64.tar.gz"
-      sha256 "d0b1e43ececc119e9c14d5699202af83611888dac3546fa770cdfc192edd7054"
-    end
     if Hardware::CPU.intel?
-      url "https://github.com/sampointer/digaz/releases/download/v0.3.5/digaz_0.3.5_Darwin_x86_64.tar.gz"
-      sha256 "0197be868b12226f847ffd41774cdc6a5005955fba8dd473e98c55dfe1fed4f8"
+      url "https://github.com/sampointer/digaz/releases/download/v0.3.6/digaz_0.3.6_Darwin_x86_64.tar.gz"
+      sha256 "87c0c1d9181471e62a276c4ef013274504e755b9415509ffd0efa90dea0a6d28"
+
+      def install
+        bin.install "digaz"
+      end
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/sampointer/digaz/releases/download/v0.3.6/digaz_0.3.6_Darwin_arm64.tar.gz"
+      sha256 "758ae4d2fc79fb6faaa7826788338fef9429f1265e4fe1b7b55355238a6f332f"
+
+      def install
+        bin.install "digaz"
+      end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/sampointer/digaz/releases/download/v0.3.5/digaz_0.3.5_Linux_x86_64.tar.gz"
-      sha256 "6daf818d08c3d29993e2f97bb035371a5a412f7eeaa2fc824ed6ce0e772a58b5"
+      url "https://github.com/sampointer/digaz/releases/download/v0.3.6/digaz_0.3.6_Linux_x86_64.tar.gz"
+      sha256 "6410e610bd21ca20e365d6a3c95ce6c304a1bee78d1f70cfb770c1242febc724"
+
+      def install
+        bin.install "digaz"
+      end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sampointer/digaz/releases/download/v0.3.5/digaz_0.3.5_Linux_arm64.tar.gz"
-      sha256 "c694b5bfb63bbdbb9d26e0d870ec556fd03e71e103463d90f1ab9699bebaa083"
-    end
-  end
+      url "https://github.com/sampointer/digaz/releases/download/v0.3.6/digaz_0.3.6_Linux_arm64.tar.gz"
+      sha256 "0be6c43eb43078463fcf3d3613f837bcd448c6a02803622970f74a75e21264e8"
 
-  def install
-    bin.install "digaz"
+      def install
+        bin.install "digaz"
+      end
+    end
   end
 end
